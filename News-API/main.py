@@ -1,7 +1,7 @@
 import requests # pip3 install requests
 
 query = "Software Development"
-api_key ="d160429edeb542be9f7f4fcc2b6e7594"
+api_key ="" #add your own api key here from https://newsapi.org/
 
 url= f"https://newsapi.org/v2/everything?q={query}&from=2025-06-28&sortBy=publishedAt&apiKey={api_key}"
 print(url)

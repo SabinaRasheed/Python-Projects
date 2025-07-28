@@ -1,4 +1,4 @@
-import requests
+import requests # pip3 install requests
 
 query = "Software Development"
 api_key ="d160429edeb542be9f7f4fcc2b6e7594"

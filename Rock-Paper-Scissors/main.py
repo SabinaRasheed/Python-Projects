@@ -1,7 +1,11 @@
 import random
 
-choices = ('r', 'p', 's')
-emojis = {'r': '🪨', 'p': '📃', 's': '✂️'}
+ROCK = 'r'
+PAPER = 'p'
+SCISSORS = 's'
+
+emojis = {ROCK: '🪨', PAPER: '📃', SCISSORS: '✂️'}
+choices = tuple(emojis.keys())
 
 def get_user_choice():
     """Prompt the user to enter a valid choice."""
@@ -10,7 +14,7 @@ def get_user_choice():
         if choice in choices:
             return choice
         else:
-            print("Invalid choice. Please enter 'r', 'p', or 's'.")
+            print("Invalid choice. Please enter r, p, s.")
 
 def get_computer_choice():
     """Return a random choice for the computer."""
@@ -26,9 +30,9 @@ def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         print("It's a tie!")
     elif (
-        (user_choice == 'r' and computer_choice == 's') or
-        (user_choice == 'p' and computer_choice == 'r') or
-        (user_choice == 's' and computer_choice == 'p')
+        (user_choice == ROCK and computer_choice == SCISSORS) or
+        (user_choice == PAPER and computer_choice == ROCK) or
+        (user_choice == SCISSORS and computer_choice == PAPER)
     ):
         print("You win!")
     else:
